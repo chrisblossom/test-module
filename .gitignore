@@ -1,0 +1,14 @@
+# This file is managed by backtrack
+#
+# DO NOT MODIFY
+
+.DS_Store
+node_modules
+*.swp
+*.log
+.env
+*.ignore
+.idea
+.vscode
+.cache
+coverage

@@ -1,0 +1,41 @@
+{
+  "name": "test-module",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "engines": {
+    "node": ">=6.9.0",
+    "npm": ">=3.10.10",
+    "yarn": ">=1.6.0"
+  },
+  "files": [
+    "lib/"
+  ],
+  "main": "lib/test-module.js",
+  "scripts": {
+    "postinstall": "node lib/install.js",
+    "format": "backtrack format",
+    "lint": "backtrack lint",
+    "lint.fix": "backtrack lint.fix",
+    "precommit": "backtrack precommit",
+    "prepublishOnly": "backtrack prepublishOnly",
+    "prepush": "backtrack prepush",
+    "test": "backtrack test",
+    "test.ci": "backtrack test.ci",
+    "test.ci-pretest": "backtrack test.ci-pretest",
+    "test.update": "jest --updateSnapshot",
+    "test.watch": "jest --watch"
+  },
+  "lint-staged": {
+    "*.{js,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@backtrack/core": "^0.1.18",
+    "@backtrack/preset-preset": "^0.1.16"
+  }
+}
